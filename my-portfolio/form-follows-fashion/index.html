@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover stylish clothing and quality footwear at Form Follows Fashion on Tom Mboya Street, Nairobi, Kenya.">
+  <title>Form Follows Fashion | Nairobi, Kenya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">
+    <span>⌖ Tom Mboya Street, Nairobi, Kenya</span>
+    <span class="announcement-center">Stylish Clothes <i>•</i> Quality Footwear <i>•</i> Everyday Looks</span>
+    <span>Nationwide delivery available</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Form Follows Fashion home">
+      <span class="brand-mark" aria-hidden="true">♧</span>
+      <span class="brand-name">FORM FOLLOWS <em>Fashion</em></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a class="active" href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#men">Men</a>
+      <a href="#women">Women</a>
+      <a href="#footwear">Footwear</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="searchToggle" aria-label="Search products">⌕</button>
+      <a class="icon-button account-link" href="#contact" aria-label="Contact the store">♙</a>
+      <button class="icon-button cart-button" id="cartToggle" aria-label="View shopping cart">🛍 <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <section class="search-panel" id="searchPanel" hidden>
+    <label for="searchInput">Find your next look</label>
+    <input id="searchInput" type="search" placeholder="Search clothes and footwear…">
+    <button id="searchClear" class="text-button" type="button">Clear</button>
+  </section>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">WELCOME TO</p>
+        <h1>Form Follows<br>Fashion<span>.</span></h1>
+        <p class="hero-description">Trendy clothes. Quality footwear.<br>All in one place.</p>
+        <a class="button button-primary" href="#shop">Shop now <span>→</span></a>
+        <p class="hero-location">⌖ <span>Tom Mboya Street, Nairobi, Kenya</span></p>
+      </div>
+      <div class="hero-image" role="img" aria-label="Fashionable people wearing modern streetwear in Nairobi">
+        <div class="hero-image-label">YOUR STYLE. YOUR STORY.</div>
+      </div>
+    </section>
+
+    <section class="section categories-section" id="shop">
+      <div class="section-heading">
+        <span></span><div><h2>Shop by category</h2><p>Find your style, from head to toe.</p></div><span></span>
+      </div>
+      <div class="category-grid">
+        <a class="category-card" id="men" href="#products" data-filter="men">
+          <img src="men.jpg" alt="Men's casual fashion" loading="lazy">
+          <div class="category-overlay"><h3>Men</h3><span>Shop now →</span></div>
+        </a>
+        <a class="category-card" id="women" href="#products" data-filter="women">
+          <img src="women.jpg" alt="Women's contemporary fashion" loading="lazy">
+          <div class="category-overlay"><h3>Women</h3><span>Shop now →</span></div>
+        </a>
+        <a class="category-card" id="footwear" href="#products" data-filter="footwear">
+          <img src="shoe.avif" alt="Stylish sneakers" loading="lazy">
+          <div class="category-overlay"><h3>Footwear</h3><span>Shop now →</span></div>
+        </a>
+        <a class="category-card" href="#products" data-filter="new">
+          <img src="new-arrivals.avif" alt="New season clothing collection" loading="lazy">
+          <div class="category-overlay"><h3>New arrivals</h3><span>Shop now →</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section products-section" id="products">
+      <div class="section-heading">
+        <span></span><div><h2>Top picks</h2><p>Fresh looks for every day.</p></div><span></span>
+      </div>
+      <div class="product-toolbar">
+        <div class="filter-buttons" aria-label="Filter products">
+          <button class="filter-button selected" data-filter="all">All</button>
+          <button class="filter-button" data-filter="men">Men</button>
+          <button class="filter-button" data-filter="women">Women</button>
+          <button class="filter-button" data-filter="footwear">Footwear</button>
+          <button class="filter-button" data-filter="new">New arrivals</button>
+        </div>
+        <p id="resultCount" aria-live="polite">6 products</p>
+      </div>
+      <div class="product-grid" id="productGrid">
+        <article class="product-card" data-category="men" data-name="Men's graphic sweatshirt">
+          <div class="product-image"><img src="graphic.jpg" alt="Men's graphic sweatshirt" loading="lazy"><span class="product-tag">POPULAR</span></div>
+          <h3>Men's Graphic Sweatshirt</h3><p class="product-price">KSh 2,800</p><button class="add-button" data-product="Men's Graphic Sweatshirt" data-price="2800">Add to cart</button>
+        </article>
+        <article class="product-card" data-category="women new" data-name="Women's bodycon dress">
+          <div class="product-image"><img src="bodycon.jpg" alt="Women's fitted dress" loading="lazy"><span class="product-tag">NEW</span></div>
+          <h3>Women's Bodycon Dress</h3><p class="product-price">KSh 2,500</p><button class="add-button" data-product="Women's Bodycon Dress" data-price="2500">Add to cart</button>
+        </article>
+        <article class="product-card" data-category="footwear men" data-name="Everyday low-top sneakers">
+          <div class="product-image"><img src="shoes.avif" alt="Red and white everyday sneakers" loading="lazy"></div>
+          <h3>Everyday Low-Top Sneakers</h3><p class="product-price">KSh 4,500</p><button class="add-button" data-product="Everyday Low-Top Sneakers" data-price="4500">Add to cart</button>
+        </article>
+        <article class="product-card" data-category="women new" data-name="Women's cargo trousers">
+          <div class="product-image"><img src="women-cargo.jpeg" alt="Neutral casual trousers" loading="lazy"></div>
+          <h3>Women's Cargo Trousers</h3><p class="product-price">KSh 2,200</p><button class="add-button" data-product="Women's Cargo Trousers" data-price="2200">Add to cart</button>
+        </article>
+        <article class="product-card" data-category="footwear new" data-name="High-top street sneakers">
+          <div class="product-image"><img src="hot-sneakers.png" alt="High-top street sneakers" loading="lazy"><span class="product-tag">NEW</span></div>
+          <h3>High-Top Street Sneakers</h3><p class="product-price">KSh 5,000</p><button class="add-button" data-product="High-Top Street Sneakers" data-price="5000">Add to cart</button>
+        </article>
+        <article class="product-card" data-category="men" data-name="Men's everyday hoodie">
+          <div class="product-image"><img src="hoodie.jpg" alt="Casual everyday hoodie" loading="lazy"></div>
+          <h3>Men's Everyday Hoodie</h3><p class="product-price">KSh 3,500</p><button class="add-button" data-product="Men's Everyday Hoodie" data-price="3500">Add to cart</button>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>No products match that search. Try another term.</p>
+    </section>
+
+    <section class="store-promo" id="about">
+      <div class="benefits">
+        <p class="eyebrow light">THE FORM FOLLOWS DIFFERENCE</p>
+        <h2>Good style.<br>Everyday confidence.</h2>
+        <div class="benefit-grid">
+          <div><span class="benefit-icon">✧</span><h3>Curated style</h3><p>Pieces for your everyday wardrobe.</p></div>
+          <div><span class="benefit-icon">◇</span><h3>Fair prices</h3><p>Looks you'll love at friendly prices.</p></div>
+          <div><span class="benefit-icon">↗</span><h3>Delivery options</h3><p>Ask us about delivery across Kenya.</p></div>
+        </div>
+      </div>
+      <div class="store-photo" role="img" aria-label="Fashion retail store interior">
+        <div class="store-address"><span class="pin">⌖</span><div><strong>VISIT OUR STORE</strong><p>Tom Mboya Street<br>Nairobi, Kenya</p><a class="button button-primary" href="https://www.google.com/maps/search/?api=1&query=Tom+Mboya+Street+Nairobi+Kenya" target="_blank" rel="noopener">Get directions →</a></div></div>
+      </div>
+    </section>
+
+    <section class="newsletter section" id="contact">
+      <div><p class="eyebrow">STAY IN STYLE</p><h2>Good things are coming.</h2><p>Join our list for new arrivals and store updates.</p></div>
+      <form id="newsletterForm" class="newsletter-form">
+        <label class="sr-only" for="emailInput">Your email address</label>
+        <input id="emailInput" type="email" placeholder="Your email address" required>
+        <button class="button button-primary" type="submit">Subscribe</button>
+        <p id="newsletterMessage" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">♧</span><span class="brand-name">FORM FOLLOWS <em>Fashion</em></span></a>
+      <p class="footer-tagline">Clothes · Footwear · Lifestyle</p>
+      <div><h3>Quick links</h3><a href="#home">Home</a><a href="#shop">Shop</a><a href="#men">Men</a><a href="#women">Women</a><a href="#footwear">Footwear</a></div>
+      <div><h3>Customer care</h3><a href="#contact">Contact us</a><a href="#contact">Delivery enquiries</a><a href="#contact">Returns & exchanges</a><a href="#contact">Size guidance</a></div>
+      <div><h3>Find us</h3><p>Tom Mboya Street<br>Nairobi, Kenya</p><a href="https://www.google.com/maps/search/?api=1&query=Tom+Mboya+Street+Nairobi+Kenya" target="_blank" rel="noopener">Get directions ↗</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Form Follows Fashion. All rights reserved.</span><span>Style lives here.</span></div>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-header"><h2>Your bag</h2><button id="cartClose" aria-label="Close shopping cart">✕</button></div>
+    <div id="cartItems" class="cart-items"><p class="cart-empty">Your bag is empty. Find something you love.</p></div>
+    <div class="cart-footer"><div class="cart-total"><span>Subtotal</span><strong id="cartTotal">KSh 0</strong></div><p class="cart-note">Delivery costs, if applicable, are confirmed separately.</p><button class="button button-primary checkout-button" id="checkoutButton">Enquire to order</button><p id="checkoutMessage" class="form-message" aria-live="polite"></p></div>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
